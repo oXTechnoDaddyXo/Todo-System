@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: transparent;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.frame {
+    width: 430px;
+    padding: 22px;
+    color: #f5e6c8;
+
+    background: linear-gradient(145deg, #3a2615, #1d120a);
+    border: 3px solid #c2a36b;
+    border-radius: 6px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.85),
+        inset 0 0 20px rgba(255, 220, 150, 0.08);
+
+    transform: perspective(1000px) rotateX(6deg) rotateY(-3deg);
+    animation: floatPaper 6s ease-in-out infinite;
+}
+
+@keyframes floatPaper {
+    0% { transform: perspective(1000px) rotateX(6deg) rotateY(-3deg) translateY(0px); }
+    50% { transform: perspective(1000px) rotateX(5deg) rotateY(-2deg) translateY(-6px); }
+    100% { transform: perspective(1000px) rotateX(6deg) rotateY(-3deg) translateY(0px); }
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.inputRow {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 7px;
+    background: linear-gradient(#2b1a0d, #1a0f08);
+    border: 1px solid #c2a36b;
+    color: #f5e6c8;
+}
+
+button {
+    background: linear-gradient(145deg, #8b5a2b, #5a381a);
+    border: 1px solid #c2a36b;
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.35);
+    margin: 6px 0;
+    padding: 8px;
+    border-left: 3px solid #c2a36b;
+}
+
+.task:hover {
+    transform: translateX(5px);
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.closeBtn {
+    width: 100%;
+    margin-top: 12px;
+}
