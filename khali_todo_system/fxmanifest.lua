@@ -30,7 +30,6 @@ files {
     'html/style.css',
     'html/app.js',
     'html/logo.png',
-    'config.lua'
 }
 
 client_scripts {
